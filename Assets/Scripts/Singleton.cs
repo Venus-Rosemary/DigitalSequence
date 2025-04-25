@@ -28,7 +28,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         if (_instance == null)
         {
             _instance = this as T;
-            DontDestroyOnLoad(gameObject); // 如果希望在场景切换时也保持实例，可以加上这一行
+            //DontDestroyOnLoad(gameObject); // 如果希望在场景切换时也保持实例，可以加上这一行
         }
         else
         {

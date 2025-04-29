@@ -33,8 +33,11 @@ public class UpdataTaskProgress : MonoBehaviour
         TaskData currentData = 
             UIController.Instance.tasksD.Find(t => t.taskName == TaskName.ToString());
 
-        topScore.text = $"最高得分：{currentData.highestScore}";
-        topTime.text = $"最长时间：{currentData.bestTime:F2}s";
+        if (currentData!=null)
+        {
+            topScore.text = $"最高得分：{currentData.highestScore}";
+            topTime.text = $"最长时间：{currentData.bestTime:F2}s";
+        }
 
     }
 }
